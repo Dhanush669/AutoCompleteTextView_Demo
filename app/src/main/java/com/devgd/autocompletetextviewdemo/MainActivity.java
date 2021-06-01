@@ -20,8 +20,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Initializing View
         personNames=new ArrayList<>();
         autoCompleteTextView=findViewById(R.id.autocompleteTextView);
+
+        // Adding String Data to ArrayList
         personNames.add("Abdul Kalam IND");
         personNames.add("Alastair Cook ENG");
         personNames.add("Aaron Finch AUS");
@@ -30,7 +33,10 @@ public class MainActivity extends AppCompatActivity {
         personNames.add("MS Dhoni IND");
         personNames.add("AB de Villiers SA");
 
+        // Initializing ArrayAdapter
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,personNames);
+
+        // Adding ArrayAdapter to AutoCompleteTextView
         autoCompleteTextView.setAdapter(adapter);
 
     }
